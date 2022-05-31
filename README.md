@@ -16,7 +16,7 @@ NOTE: Synesthesia Pro is required for this to work.
 
 It will include a CLI tool later to avoid having to clone this repo. Note that this should not be used to build upon for now. It's in a very early stage of development. I just needed the functionality for now, but a cleaner solution will be implemented later.
 
-Note that this is not affiliated with the team behind Synesthesia, and has only limited support. For problems, please open an issue here.
+Note that this is not affiliated with the team behind Synesthesia. For problems or suggestions please open an issue here.
 
 For the official Synesthesia OSC interface, you can find documentation [here](https://synesthesia.live/docs/manual/osc.html)
 
