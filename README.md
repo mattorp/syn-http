@@ -1,6 +1,8 @@
 # syn-http
 
-This is a HTTP endpoint for [Synesthesia](https://synesthesia.live). For now, it supports setting controls and scenes and getting the audio variables from Synesthesia. NOTE: Synesthesia Pro is required for this to work.
+This is an HTTP endpoint for [Synesthesia](https://synesthesia.live). For now, it supports setting controls and scenes and getting the audio variables from Synesthesia. The purpose is to provide a URL interface, that map to OSC messages.
+
+NOTE: Synesthesia Pro is required for this to work.
 
 ![](img/terminals.png)
 
@@ -12,7 +14,7 @@ This is a HTTP endpoint for [Synesthesia](https://synesthesia.live). For now, it
 - [Available Variables](#available-variables)
 - [Available Controls](#available-controls)
 
-It will include a CLI tool later to avoid having to clone this repo. Note that this should not be used to build upon for now. It's in a very early stage of development.
+It will include a CLI tool later to avoid having to clone this repo. Note that this should not be used to build upon for now. It's in a very early stage of development. I just needed the functionality for now, but a cleaner solution will be implemented later.
 
 Note that this is not affiliated with the team behind Synesthesia, and has only limited support. For problems, please open an issue here.
 
