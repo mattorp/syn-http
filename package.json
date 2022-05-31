@@ -1,0 +1,23 @@
+{
+  "name": "syn-http",
+  "packageManager": "yarn@3.2.1",
+  "scripts": {
+    "list-env": "cat .env",
+    "start": "npm run list-env; node src/index.js",
+    "dev": "npm run list-env; yarn nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "node-osc": "^7.0.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-standard": "latest",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2"
+  }
+}
