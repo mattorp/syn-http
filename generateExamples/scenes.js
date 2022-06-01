@@ -4,6 +4,6 @@ const scenes = [
 
 scenes.forEach(scene => {
   console.log(
-      `curl http://localhost:6001/scenes/${scene}`
+      `http://localhost:6001/scenes/${scene}`
   )
 })

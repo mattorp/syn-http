@@ -4,6 +4,6 @@ import {
 
 synAudioVariables.forEach(variable => {
   console.log(
-      `curl http://localhost:6001/values/${variable}`
+      `http://localhost:6001/values/${variable}`
   )
 })

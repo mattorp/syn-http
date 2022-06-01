@@ -19,7 +19,7 @@ const metaControls = ['invert',
 
 metaControls.forEach(control => {
   console.log(
-      `curl http://localhost:6001/controls/${control}/1.0`
+      `http://localhost:6001/controls/${control}/1.0`
   )
 })
 
@@ -27,7 +27,7 @@ const colors = ['low_color', 'high_color']
 
 colors.forEach((color, i) => {
   console.log(
-      `curl http://localhost:6001/controls/${color}/${encodeURI([i, i, i].join(' '))}.`
+      `http://localhost:6001/controls/${color}/${encodeURI([i, i, i].join(' '))}.`
   )
 })
 
@@ -41,8 +41,8 @@ const sceneControls = [
 
 sceneControls.forEach(control => {
   console.log(
-      `curl http://localhost:6001/controls/scene-${control}-0/1.0`
+      `http://localhost:6001/controls/scene-${control}-0/1.0`
   )
 })
 
-console.log('curl http://localhost:6001/controls/scene-xy-0/1.0%200.0')
+console.log('http://localhost:6001/controls/scene-xy-0/1.0%200.0')
