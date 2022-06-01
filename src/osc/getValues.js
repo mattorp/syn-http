@@ -1,3 +1,7 @@
+import {
+  logInfo
+} from '../logging.js'
+
 const noValueFound = values => (control) => `
 ${Object.keys(values).join('\n')}
 
@@ -25,7 +29,7 @@ export const storeValues = bundle => {
 
 export const getValue = ({ msgValue, res }) => {
   const value = storedValues[msgValue]
-  process.env.LOG && console.log(`${msgValue}\n${value}\n`)
+  logInfo(`${msgValue}\n${value}\n`)
   return value
     ? JSON.stringify(value)
     : noValueFound(storedValues)(msgValue)

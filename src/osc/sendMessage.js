@@ -1,4 +1,6 @@
-
+import {
+  logInfo
+} from '../logging.js'
 const formatValue = (value) =>
   isNaN(value) ? value : value.split(' ').map(val => parseFloat(val))
 
@@ -12,7 +14,7 @@ export const sendMessage = oscClient => async (address, value) => {
             console.error(err)
             reject(err)
           } else {
-            process.env.LOG && console.log(`
+            logInfo(`
 Sent message
 ${address}
 ${value}`)

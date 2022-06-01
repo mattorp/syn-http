@@ -3,6 +3,8 @@ const SYN_HOST = process.env.SYN_HOST || '127.0.0.1'
 
 export const listenDetails = `HTTP Server is listening on port ${HTTP_PORT}
 
+You can disable logging to optimize performance by setting the environment variables: LOG_INFO and LOG_WARNINGS to false.
+
 To set a control value, use something like this:
 CONTROL=brightness
 VALUE=0.5
