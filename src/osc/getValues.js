@@ -1,5 +1,15 @@
-export const getValues = bundle =>
-  bundle.elements.reduce((acc, element, i) => {
+const noValueFound = values => (control) => `
+${Object.keys(values).join('\n')}
+
+No value for control: ${control}
+
+See valid controls above
+`
+
+let storedValues = {}
+
+export const storeValues = bundle => {
+  storedValues = bundle.elements.reduce((acc, element, i) => {
     const [_control, val] = element || []
       .address.split('.')
     if (_control) {
@@ -11,3 +21,12 @@ export const getValues = bundle =>
   },
 
   {})
+}
+
+export const getValue = ({ msgValue, res }) => {
+  const value = storedValues[msgValue]
+  process.env.LOG && console.log(`${msgValue}\n${value}\n`)
+  return value
+    ? JSON.stringify(value)
+    : noValueFound(storedValues)(msgValue)
+}

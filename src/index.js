@@ -1,69 +1,40 @@
 
 import {
-  getValues, httpServer, noValueFound, oscClient, oscServer, sendMessage,
-  validateRequest
+  getAddress, getMsgValue, getValue, getVariant, httpServer, oscClient, oscServer, sendMessage, storeValues
 } from './osc/index.js'
 
-const send = sendMessage(oscClient)
-
 let lastFetched = Date.now()
-let values = {}
 
 httpServer.on('request', async (req, res) => {
-  const { url } = req
-  const [, variant, control, valueStr] = decodeURI(url).split('/')
-  if (variant === 'scenes') {
-    const scene = control
-    send('/scenes', scene)
-    res.end('OK')
-  } else if (variant === 'controls') {
-    const values = valueStr.split(' ')
-    const value =
-      values.map(val => parseFloat(val)
-      )
+  const [, ...msg] = decodeURI(req.url).split('/')
+  const address = getAddress(msg)
+  const msgValue = getMsgValue(msg)
 
-    validateRequest(res, {
-      value
-    })
-
-    try {
-      const msg = await send(`/controls/${control}`, value)
-      res.statusCode = 200
-      res.end(msg)
-    } catch (err) {
-      res.statusCode = 500
-      res.end(err)
+  try {
+    res.statusCode = 200
+    if (getVariant(msg) === 'values') {
+      res.end(getValue({ msgValue, res }))
+      return
+    } else {
+      await sendMessage(oscClient)(address, msgValue)
+      res.end('OK')
+      return
     }
-  } else if (variant === 'values') {
-    const value = values[control]
-    process.env.LOG && console.log(`${control}
-${value}
-`)
-    res.end(
-      value
-        ? JSON.stringify(value)
-        : noValueFound(values)(control))
+  } catch (err) {
+    console.error(err)
+    res.statusCode = 500
+    res.end(err)
   }
 })
 
 oscServer
-  .on('bundle', function (bundle) {
-    values = getValues(bundle)
+  .on('bundle', (bundle) => {
+    storeValues(bundle)
     lastFetched = Date.now()
   })
 
-const throwIfNotConnected = () => {
-  throw new Error('No new values. Check if Synesthesia is running and OSC output is enabled.')
-}
-
-setTimeout(() => {
-  if (Object.keys(values).length === 0) {
-    throwIfNotConnected()
-  }
-}, 100)
-
 setInterval(() => {
   if (lastFetched < Date.now() - 2000) {
-    throwIfNotConnected()
+    throw new Error('Values are not being received. Check if Synesthesia is running and OSC output is enabled.')
   }
 }, 2000)

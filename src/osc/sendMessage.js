@@ -1,7 +1,12 @@
+
+const formatValue = (value) =>
+  isNaN(value) ? value : value.split(' ').map(val => parseFloat(val))
+
 export const sendMessage = oscClient => async (address, value) => {
   const promise = new Promise((resolve, reject) => {
     try {
-      oscClient.send(address, value,
+      console.log(formatValue(value))
+      oscClient.send(address, formatValue(value),
         (err) => {
           if (err) {
             console.error(err)
@@ -11,7 +16,7 @@ export const sendMessage = oscClient => async (address, value) => {
 Sent message
 ${address}
 ${value}`)
-            resolve()
+            resolve('OK')
           }
         }
       )
