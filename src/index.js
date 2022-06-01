@@ -1,7 +1,10 @@
 
+import dotenv from 'dotenv'
 import {
   getAddress, getMsgValue, getValue, getVariant, httpServer, oscClient, oscServer, sendMessage, storeValues
 } from './osc/index.js'
+
+dotenv.config()
 
 let lastFetched = Date.now()
 
