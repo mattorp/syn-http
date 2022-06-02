@@ -20,7 +20,7 @@ httpServer.on('request', async (req, res) => {
       return
     } else {
       await sendMessage(oscClient)(address, msgValue)
-      res.end('OK')
+      res.end('\nOK')
       return
     }
   } catch (err) {
