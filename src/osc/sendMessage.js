@@ -31,7 +31,8 @@ const splitMessages = (address, passedValue) => {
 export const sendMessage = oscClient => async (address, value) => {
   const promise = new Promise((resolve, reject) => {
     try {
-      splitMessages(address, value).forEach(([addr, val]) => {
+      splitMessages(address,
+        value.toLowerCase()).forEach(([addr, val]) => {
         oscClient.send(addr, formatValue(val),
           (err) => {
             if (err) {
