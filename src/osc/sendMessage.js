@@ -6,10 +6,7 @@ const formatValue = (value) =>
 
 const entries = ['x', 'y', 'r']
 
-const splitMessages = (address, value) => {
-  const values = value.split(' ')
-  return values.length === 1 ? [[address, value]] : values.map((val, i) => [address + '/' + entries[i], val])
-}
+const splitMessages = (address, value) => value.split(' ').map((val, i, { length }) => [address + (length > 1 ? '/' + entries[i] : ''), val])
 
 export const sendMessage = oscClient => async (address, value) => {
   const promise = new Promise((resolve, reject) => {
