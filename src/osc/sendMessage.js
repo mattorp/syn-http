@@ -16,7 +16,6 @@ const splitMessages = (address, passedValue) => {
     ? passedValue
       // remove [], () and spaces
       .replace(/[\[\]\(\)\s]/g, '')
-      .split(',').map(val => parseFloat(val)).join(' ')
     : passedValue
 
   if (
