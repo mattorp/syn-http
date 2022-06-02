@@ -59,6 +59,8 @@ Then send an HTTP request to the server, e.g. using bash from another terminal. 
 
 All controls are normalized to the range 0-1. Even if the value in the app is shown as something else, it is still normalized. E.g., brightness is shown as -1 to 0 in the app, but use 0 to set it to 0%, and 1 to set it to 100%.
 
+[Examples folder](./examples)
+
 ### Set Controls
 
 ```bash
