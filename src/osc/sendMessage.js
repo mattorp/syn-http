@@ -2,7 +2,10 @@ import {
   logInfo
 } from '../logging.js'
 const formatValue = (value) =>
-  isNaN(value) ? value.split(' ').map((val, i) => parseFloat(val)) : value
+  isNaN(value)
+    ? value.replaceAll(',', ' ')
+      .split(' ').map((val, i) => parseFloat(val))
+    : value
 
 const entries = ['r', 'g', 'b']
 
