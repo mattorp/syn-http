@@ -1,9 +1,10 @@
 import {
   synAudioVariables
 } from '../src/synAudioVariables.js'
+import { VALUES } from '../src/urls.js'
 
 synAudioVariables.forEach(variable => {
   console.log(
-      `http://localhost:6001/values/${variable}`
+      `http://${VALUES}/${variable}`
   )
 })
