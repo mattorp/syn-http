@@ -1,3 +1,5 @@
+import dotenv from 'dotenv'
+dotenv.config()
 const HTTP_PORT = process.env.HTTP_PORT
 const SYN_HOST = process.env.SYN_HOST
 
