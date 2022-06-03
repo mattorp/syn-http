@@ -4,7 +4,7 @@ import {
 const formatValue = (value) =>
   isNaN(value)
     ? value.replaceAll(',', ' ')
-      .split(' ').map((val, i) => parseFloat(val))
+      .split(' ').map((val, i) => isNaN(val) ? val : parseFloat(val))
     : value
 
 const entries = ['r', 'g', 'b']
