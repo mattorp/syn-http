@@ -4,9 +4,10 @@ import * as urls from '../src/urls.js'
 const envFile = fs.readFileSync('./.env', 'utf8')
 const env = envFile.split('\n')
   .filter(line => line.length > 0)
+  .filter(line => line.indexOf('=') > 0)
   .map(line => line.split('='))
   .reduce((acc, [key, value]) => {
-    acc[key] = value
+    acc[key] = value.split('#')[0].trim()
     return acc
   }
   , {})
