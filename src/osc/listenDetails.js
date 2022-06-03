@@ -1,5 +1,5 @@
-const HTTP_PORT = process.env.HTTP_PORT || 6001
-const SYN_HOST = process.env.SYN_HOST || '127.0.0.1'
+const HTTP_PORT = process.env.HTTP_PORT
+const SYN_HOST = process.env.SYN_HOST
 
 export const listenDetails = `HTTP Server is listening on port ${HTTP_PORT}
 
