@@ -7,7 +7,7 @@ LOW_COLOR='rgb(0,255,0)'
 HIGH_COLOR='rgb(0,255,255)'
 
 HOST=localhost
-PORT=6001
+PORT=5999
 URL=http://$HOST:$PORT/controls
 
 curl $URL/limit_colors/1.0

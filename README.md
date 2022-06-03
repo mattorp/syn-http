@@ -55,7 +55,7 @@ Then start the server:
 npm run start
 ```
 
-Then send an HTTP request to the server, e.g. using bash from another terminal. The default port for the server is 6001. It can be changed in ./.env
+Then send an HTTP request to the server, e.g. using bash from another terminal. The default port for the server is 5999. It can be changed in ./.env
 
 All controls are normalized to the range 0-1. Even if the value in the app is shown as something else, it is still normalized. E.g., brightness is shown as -1 to 0 in the app, but use 0 to set it to 0%, and 1 to set it to 100%.
 
@@ -64,7 +64,7 @@ All controls are normalized to the range 0-1. Even if the value in the app is sh
 ### Set Controls
 
 ```bash
-PORT=6001
+PORT=5999
 CONTROL=brightness
 VALUE=0.5
 curl http://localhost:$PORT/controls/$CONTROL/$VALUE
@@ -73,7 +73,7 @@ curl http://localhost:$PORT/controls/$CONTROL/$VALUE
 ### Set Scene
 
 ```bash
-PORT=6001
+PORT=5999
 SCENE=AlienCavern
 curl http://localhost:$PORT/scenes/$SCENE
 ```
@@ -83,7 +83,7 @@ The scene names can be found in the Synesthesia app.
 ### Get Audio Variables
 
 ```bash
-PORT=6001
+PORT=5999
 VARIABLE=syn_Presence
 curl http://localhost:$PORT/values/$VARIABLE
 ```

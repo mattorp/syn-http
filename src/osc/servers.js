@@ -6,7 +6,7 @@ export const oscServer = new Server(
 export const oscClient = new Client(process.env.SYN_HOST, process.env.INPUT_PORT || 6000)
 export const httpServer = http.createServer()
 
-httpServer.listen(6001, () => {
+httpServer.listen(5999, () => {
   console.log(listenDetails)
 })
 
