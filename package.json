@@ -5,7 +5,10 @@
     "list-env": "cat .env",
     "start": "npm run list-env; node src/index.js",
     "dev": "npm run list-env; yarn nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "example:controls": "node generateExamples/controls.js",
+    "example:scenes": "node generateExamples/scenes.js",
+    "example:values": "node generateExamples/values.js"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
