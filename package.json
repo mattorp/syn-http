@@ -2,6 +2,7 @@
   "name": "syn-http",
   "packageManager": "yarn@3.2.1",
   "scripts": {
+    "export-env": "node scripts/export-env.js && echo use: source .env.export",
     "list-env": "cat .env",
     "start": "npm run list-env; node src/index.js",
     "dev": "npm run list-env; yarn nodemon src/index.js",
