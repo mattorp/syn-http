@@ -29,8 +29,6 @@ const splitMessages = (address, passedValue) => {
   }
 }
 
-splitMessages('/controls', '1')
-
 export const sendMessage = oscClient => async (address, value) => {
   const promise = new Promise((resolve, reject) => {
     try {
