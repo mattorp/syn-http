@@ -13,6 +13,7 @@ NOTE: Synesthesia Pro is required for this to work.
   - [Get Audio Variables](#get-audio-variables)
 - [Available Variables](#available-variables)
 - [Available Controls](#available-controls)
+- [Convenience](#convenience)
 
 It will include a CLI tool later to avoid having to clone this repo. Note that this should not be used to build upon for now. It's in a very early stage of development. I just needed the functionality for now, but a cleaner solution will be implemented later.
 
@@ -64,18 +65,16 @@ All controls are normalized to the range 0-1. Even if the value in the app is sh
 ### Set Controls
 
 ```bash
-PORT=5999
 CONTROL=brightness
 VALUE=0.5
-curl http://localhost:$PORT/controls/$CONTROL/$VALUE
+curl http://localhost:5999/controls/$CONTROL/$VALUE
 ```
 
 ### Set Scene
 
 ```bash
-PORT=5999
 SCENE=AlienCavern
-curl http://localhost:$PORT/scenes/$SCENE
+curl http://localhost:5999/scenes/$SCENE
 ```
 
 The scene names can be found in the Synesthesia app.
@@ -83,9 +82,8 @@ The scene names can be found in the Synesthesia app.
 ### Get Audio Variables
 
 ```bash
-PORT=5999
 VARIABLE=syn_Presence
-curl http://localhost:$PORT/values/$VARIABLE
+curl http://localhost:5999/values/$VARIABLE
 ```
 
 ## Available Variables
@@ -178,3 +176,35 @@ scene-dropdown-<i>
 ```
 
 i is the 0-based index of the type of control, in order of appearance in the Synesthesia app.
+
+## Convenience
+
+You can source the .env.export file to export the variables to your shell:
+
+```bash
+source .env.export
+```
+
+This includes the shorthand variables:
+
+```bash
+CONTROLS=http://localhost:5999/controls
+SCENES=http://localhost:5999/scenes
+VALUES=http://localhost:5999/values
+```
+
+Which can be used like this:
+
+```bash
+curl $CONTROLS/brightness/0.5
+curl $SCENES/AlienCavern
+curl $VALUES/syn_Presence
+```
+
+If you change the `.env` file, make sure to use:
+
+```bash
+npm run export-env
+```
+
+This will export the variables to the `.env.export` file so that the host and ports match.
