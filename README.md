@@ -200,11 +200,3 @@ curl $CONTROLS/brightness/0.5
 curl $SCENES/AlienCavern
 curl $VALUES/syn_Presence
 ```
-
-If you change the `.env` file, make sure to use:
-
-```bash
-npm run export-env
-```
-
-This will export the variables to the `.env.export` file so that the host and ports match.
