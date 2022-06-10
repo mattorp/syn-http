@@ -179,7 +179,7 @@ i is the 0-based index of the type of control, in order of appearance in the Syn
 
 ## Convenience
 
-You can source the .env.export file to export the variables to your shell:
+You can source the .env file to export the variables to your shell. Navigate to the root directory of the repository and run:
 
 ```bash
 source .env
