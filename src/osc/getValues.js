@@ -30,7 +30,7 @@ export const storeValues = bundle => {
 export const getValue = ({ msgValue, res }) => {
   const value = storedValues[msgValue]
   logInfo(`${msgValue}\n${value}\n`)
-  return value
+  return value !== undefined
     ? JSON.stringify(value)
     : noValueFound(storedValues)(msgValue)
 }
