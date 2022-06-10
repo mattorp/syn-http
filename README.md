@@ -1,6 +1,6 @@
 # syn-http
 
-This is an HTTP endpoint for [Synesthesia](https://synesthesia.live). For now, it supports setting controls and scenes and getting the audio variables from Synesthesia. The purpose is to provide a URL interface, that map to OSC messages.
+This is an HTTP endpoint for [Synesthesia](https://synesthesia.live). For now, it supports setting controls and scenes and getting values from Synesthesia including audio variables. The purpose is to provide a URL interface, that map to OSC messages.
 
 NOTE: Synesthesia Pro is required for this to work.
 
@@ -10,8 +10,8 @@ NOTE: Synesthesia Pro is required for this to work.
 - [Usage](#usage)
   - [Set Controls](#set-controls)
   - [Set Scene](#set-scene)
-  - [Get Audio Variables](#get-audio-variables)
-- [Available Variables](#available-variables)
+  - [Get Values](#get-values)
+- [Available Values](#available-values)
 - [Available Controls](#available-controls)
 - [Convenience](#convenience)
 
@@ -79,18 +79,18 @@ curl http://localhost:5999/scenes/$SCENE
 
 The scene names can be found in the Synesthesia app.
 
-### Get Audio Variables
+### Get Values
 
 ```bash
 VARIABLE=syn_Presence
 curl http://localhost:5999/values/$VARIABLE
 ```
 
-## Available Variables
+## Available Values
 
 [Examples](examples/values.md)
 
-These variables are available from Synesthesia:
+These values are available from Synesthesia:
 
 ```txt
 syn_ToggleOnBeat
