@@ -182,23 +182,23 @@ i is the 0-based index of the type of control, in order of appearance in the Syn
 You can source the .env.export file to export the variables to your shell:
 
 ```bash
-source .env.export
+source .env
 ```
 
 This includes the shorthand variables:
 
 ```bash
-controls=http://localhost:5999/controls
-scenes=http://localhost:5999/scenes
-values=http://localhost:5999/values
+CONTROLS=http://localhost:5999/controls
+SCENES=http://localhost:5999/scenes
+VALUES=http://localhost:5999/values
 ```
 
 Which can be used like this:
 
 ```bash
-curl $controls/brightness/0.5
-curl $scenes/AlienCavern
-curl $values/syn_Presence
+curl $CONTROLS/brightness/0.5
+curl $SCENES/AlienCavern
+curl $VALUES/syn_Presence
 ```
 
 If you change the `.env` file, make sure to use:
