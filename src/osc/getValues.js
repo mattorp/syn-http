@@ -17,7 +17,7 @@ export const storeValues = bundle => {
     const [_control, val] = element || []
       .address.split('.')
     if (_control) {
-      const control = _control.slice(1)
+      const control = _control.slice(1).toLowerCase()
       return { ...acc, [control]: val }
     } else {
       return acc
@@ -30,7 +30,5 @@ export const storeValues = bundle => {
 export const getValue = ({ msgValue, res }) => {
   const value = storedValues[msgValue]
   logInfo(`${msgValue}\n${value}\n`)
-  return value !== undefined
-    ? JSON.stringify(value)
-    : noValueFound(storedValues)(msgValue)
+  return value === undefined ? noValueFound(storedValues)(msgValue) : JSON.stringify(value)
 }
