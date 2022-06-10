@@ -88,7 +88,7 @@ curl http://localhost:5999/values/$VARIABLE
 
 ## Available Variables
 
-[Examples](examples/audioVariables.md)
+[Examples](examples/values.md)
 
 These variables are available from Synesthesia:
 

@@ -1,4 +1,4 @@
-export const synAudioVariables = [
+export const synvalues = [
   'syn_ToggleOnBeat',
   'syn_Threshold',
   'syn_MidPresence',

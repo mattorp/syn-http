@@ -1,9 +1,9 @@
 import {
-  synAudioVariables
-} from '../src/synAudioVariables.js'
+  synvalues
+} from '../src/synvalues.js'
 import { VALUES } from '../src/urls.js'
 
-synAudioVariables.forEach(variable => {
+synvalues.forEach(variable => {
   console.log(
       `http://${VALUES}/${variable}`
   )
