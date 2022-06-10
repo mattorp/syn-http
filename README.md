@@ -188,17 +188,17 @@ source .env.export
 This includes the shorthand variables:
 
 ```bash
-CONTROLS=http://localhost:5999/controls
-SCENES=http://localhost:5999/scenes
-VALUES=http://localhost:5999/values
+controls=http://localhost:5999/controls
+scenes=http://localhost:5999/scenes
+values=http://localhost:5999/values
 ```
 
 Which can be used like this:
 
 ```bash
-curl $CONTROLS/brightness/0.5
-curl $SCENES/AlienCavern
-curl $VALUES/syn_Presence
+curl $controls/brightness/0.5
+curl $scenes/AlienCavern
+curl $values/syn_Presence
 ```
 
 If you change the `.env` file, make sure to use:
