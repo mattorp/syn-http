@@ -15,6 +15,8 @@ NOTE: Synesthesia Pro is required for this to work.
 - [Available Values](#available-values)
 - [Available Controls](#available-controls)
 - [Convenience](#convenience)
+- [Generator scripts](#generator-scripts)
+  - [Random controls](#random-controls)
 
 It will include a CLI tool later to avoid having to clone this repo. Note that this should not be used to build upon for now. It's in a very early stage of development. I just needed the functionality for now, but a cleaner solution will be implemented later.
 
@@ -232,3 +234,15 @@ curl $CONTROLS/brightness/0.5
 curl $SCENES/AlienCavern
 curl $VALUES/syn_Presence
 ```
+
+## Generator scripts
+
+### Random controls
+
+You can generate random controls by running the following script:
+
+```bash
+npm run generate:random:controls
+```
+
+The script will generate 10 random files saved to `./generate/random/controls/tmp`. You can run each of the `.sh` files in the directory to set the controls. To save the presets move the files to another directory. To generate new presets run the script again (this will overwrite the old ones).
