@@ -1,4 +1,4 @@
-import { CONTROLS } from '../src/urls.js'
+import { CONTROLS } from '../../../src/urls.js'
 
 const metaControls = ['invert',
   'brightness',

@@ -1,6 +1,6 @@
 
 import fs from 'fs'
-import { CONTROLS } from '../../src/urls.js'
+import { CONTROLS } from '../../../src/urls.js'
 const { random, round } = Math
 
 const metaControls = ['invert',
