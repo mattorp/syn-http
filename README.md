@@ -191,6 +191,15 @@ scene-dropdown-<i>
 
 <i> is the 0-based index of the type of control, in order of appearance in the scene.json file.
 
+You can also use the name of the control:
+
+```bash
+SCENE=AlienCavern
+CONTROL=droppers
+curl http://localhost:5999/scenes/$SCENE
+curl http://localhost:5999/controls/$CONTROL/1
+```
+
 ## Convenience
 
 You can source the .env file to export the variables to your shell. Navigate to the root directory of the repository and run:
