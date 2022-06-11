@@ -57,7 +57,9 @@ Then start the server:
 npm run start
 ```
 
-Then send an HTTP request to the server (see [Examples](#examples) below) e.g. using bash from another terminal. The default port for the server is 5999. It can be changed in ./.env
+Then send an HTTP request to the server (see [Examples](#examples) below) e.g. using bash from another terminal. The default port for the server is 5999, which can be changed in `./.env`.
+
+Note that the link deviates from the OSC format `/address value` , so that value is separated with `/` instead of a space `/address/value`. This is to avoid having to handle encoding spaces in the URL.
 
 >The control name is insensitive to case and spacing characters like "_" and "-", so you don't have to be exact; "/controls/my_slider", "/controls/MySlider", and "/controls/m-Y-s-L-i-D-e-R" would all update the same slider. [^control-names]
 
