@@ -16,7 +16,7 @@ httpServer.on('request', async (req, res) => {
     const msgValue = getMsgValue(msg)
     res.statusCode = 200
     if (getVariant(msg) === 'values') {
-      res.end(getValue({ msgValue, res }))
+      res.end(getValue({ variable: msgValue, res }))
       return
     } else {
       await sendMessage(oscClient)(address, msgValue)

@@ -27,8 +27,8 @@ export const storeValues = bundle => {
   {})
 }
 
-export const getValue = ({ msgValue, res }) => {
-  const value = storedValues[msgValue]
-  logInfo(`Got value of\n${msgValue}\n${value}\n`)
-  return value === undefined ? noValueFound(storedValues)(msgValue) : JSON.stringify(value)
+export const getValue = ({ variable, res }) => {
+  const value = storedValues[variable]
+  logInfo(`Got value of\n${variable}${value}\n`)
+  return value === undefined ? noValueFound(storedValues)(variable) : JSON.stringify(value)
 }
