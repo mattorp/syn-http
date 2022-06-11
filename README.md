@@ -175,7 +175,7 @@ scene-color-<i>
 scene-dropdown-<i>
 ```
 
-i is the 0-based index of the type of control, in order of appearance in the Synesthesia app.
+<i> is the 0-based index of the type of control, in order of appearance in the scene.json file.
 
 ## Convenience
 
