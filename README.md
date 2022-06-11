@@ -70,6 +70,20 @@ VALUE=0.5
 curl http://localhost:5999/controls/$CONTROL/$VALUE
 ```
 
+The values d and r can be used to send the default value (as defined in scene.json) or a random value.
+
+```bash
+CONTROL=brightness
+VALUE=d
+curl http://localhost:5999/controls/$CONTROL/$VALUE
+```
+
+```bash
+CONTROL=brightness
+VALUE=r
+curl http://localhost:5999/controls/$CONTROL/$VALUE
+```
+
 ### Set Scene
 
 ```bash
