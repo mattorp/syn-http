@@ -38,7 +38,7 @@ const generateRandomControls = (filePath, {
 } = {
   include: {
     meta: true,
-    colors: true,
+    colors: false,
     scene: true
   }
 }) => {
