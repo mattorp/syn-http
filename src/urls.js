@@ -1,8 +1,8 @@
 import dotenv from 'dotenv'
 dotenv.config()
 
-const HOST = process.env.HOST
-const PORT = process.env.HTTP_PORT
+const HOST = process.env.HOST || 'localhost'
+const PORT = process.env.HTTP_PORT || 5999
 
 export const CONTROLS = `http://${HOST}:${PORT}/controls`
 export const VALUES = `http://${HOST}:${PORT}/values`
