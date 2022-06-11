@@ -1,5 +1,6 @@
 import {
-  logInfo
+  logInfo,
+  logWarning
 } from '../logging.js'
 
 const noValueFound = values => (control) => `
@@ -29,6 +30,12 @@ export const storeValues = bundle => {
 
 export const getValue = ({ variable, res }) => {
   const value = storedValues[variable]
-  logInfo(`Got value of\n${variable}${value}\n`)
-  return value === undefined ? noValueFound(storedValues)(variable) : JSON.stringify(value)
+  if (value === undefined) {
+    const msg = noValueFound(storedValues)(variable)
+    logWarning(msg)
+    return msg
+  } else {
+    logInfo(`Got value of\n${variable}\n${value}\n`)
+    return JSON.stringify(value)
+  }
 }
