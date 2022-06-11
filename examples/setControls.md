@@ -46,4 +46,4 @@ http://localhost:5999/controls/scene-knob-0/1
 
 http://localhost:5999/controls/scene-dropdown-0/1
 
-http://localhost:5999/controls/scene-xy-0/1,0.0
+http://localhost:5999/controls/scene-xy-0/1,0
