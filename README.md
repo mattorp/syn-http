@@ -67,9 +67,9 @@ Note that the link deviates from the OSC format `/address value` , so that value
 
 All controls are normalized to the range 0-1. E.g., brightness is shown as -1 to 0 in the app, but use 0 to set it to 0%, and 1 to set it to 100%.
 
-[Examples folder](./examples)
-
 ## Examples
+
+A list of examples are included in the [examples folder](./examples).
 
 ### Set Controls
 
