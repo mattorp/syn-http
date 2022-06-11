@@ -62,7 +62,9 @@ Then send an HTTP request to the server (see [Examples](#examples) below) e.g. u
 All controls are normalized to the range 0-1. E.g., brightness is shown as -1 to 0 in the app, but use 0 to set it to 0%, and 1 to set it to 100%.
 
 Regarding the control name:
->The control name is insensitive to case and spacing characters like "_" and "-", so you don't have to be exact; "/controls/my_slider", "/controls/MySlider", and "/controls/m-Y-s-L-i-D-e-R" would all update the same slider. ^[https://synesthesia.live/docs/manual/osc.html]
+>The control name is insensitive to case and spacing characters like "_" and "-", so you don't have to be exact; "/controls/my_slider", "/controls/MySlider", and "/controls/m-Y-s-L-i-D-e-R" would all update the same slider. [^control-names]
+
+[^control-names]: https://synesthesia.live/docs/manual/osc.html
 
 [Examples folder](./examples)
 
