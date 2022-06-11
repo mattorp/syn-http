@@ -79,7 +79,7 @@ VALUE=0.5
 curl http://localhost:5999/controls/$CONTROL/$VALUE
 ```
 
-The values d and r can be used to send the default value (as defined in scene.json) or a random value.
+The values `d` and `r` can be used to send the default value or a random value for meta and scene controls. The default scene values are defined in `scene.json`.
 
 ```bash
 CONTROL=brightness
