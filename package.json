@@ -10,8 +10,8 @@
     "generate:examples:controls": "node scripts/generate/examples/controls.js",
     "generate:examples:scenes": "node scripts/generate/examples/scenes.js",
     "generate:examples:values": "node scripts/generate/examples/values.js",
-    "generate:random:controls": "node scripts/generate/randomControls.js",
-    "generate:examples": "npm-run-all generate:examples:*"
+    "generate:examples": "npm-run-all generate:examples:*",
+    "generate:random:controls": "node scripts/generate/random/controls.js"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
