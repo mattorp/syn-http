@@ -5,7 +5,7 @@
     "export-env": "node scripts/export-env.js && echo use: source .env.export",
     "list-env": "cat .env",
     "start": "npm run list-env; node src/index.js",
-    "dev": "npm run list-env; yarn nodemon src/index.js",
+    "dev": "npm run list-env; npx nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate:examples:controls": "node scripts/generate/examples/controls.js",
     "generate:examples:scenes": "node scripts/generate/examples/scenes.js",
