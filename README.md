@@ -203,7 +203,7 @@ scene-color-<i>
 scene-dropdown-<i>
 ```
 
-<i> is the 0-based index of the type of control, in order of appearance in the scene.json file.
+`<i>` is the 0-based index of the type of control, in order of appearance in the scene.json file.
 
 You can also use the name of the control:
 
