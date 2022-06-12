@@ -14,7 +14,9 @@
     "generate:random:controls": "node scripts/generate/random/controls.js"
   },
   "dependencies": {
+    "@types/midi": "^2.0.0",
     "dotenv": "^16.0.1",
+    "midi": "^2.0.0",
     "node-osc": "^7.0.0"
   },
   "type": "module",
