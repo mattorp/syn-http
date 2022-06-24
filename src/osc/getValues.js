@@ -13,19 +13,21 @@ See valid controls above
 
 let storedValues = {}
 
-export const storeValues = bundle => {
-  storedValues = bundle.elements.reduce((acc, element, i) => {
-    const [_control, val] = element || []
-      .address.split('.')
-    if (_control) {
-      const control = _control.slice(1).toLowerCase()
-      return { ...acc, [control]: val }
-    } else {
-      return acc
-    }
-  },
+export const getValues = bundle => bundle.elements.reduce((acc, element, i) => {
+  const [_control, val] = element || []
+    .address.split('.')
+  if (_control) {
+    const control = _control.slice(1).toLowerCase()
+    return { ...acc, [control]: val }
+  } else {
+    return acc
+  }
+},
 
-  {})
+{})
+
+export const storeValues = bundle => {
+  storedValues = getValues(bundle)
 }
 
 export const getValue = ({ variable, res }) => {
