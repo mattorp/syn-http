@@ -11,4 +11,9 @@ const updateControls = (controls) =>
 const randomizeAtInterval = (controls, interval) =>
   setInterval(() => updateControls(randomize(controls)), interval)
 
-randomizeAtInterval(allSceneControls, process.argv[2] || 1000)
+const controls = allSceneControls
+// Other examples:
+// const controls = ['scene-slider-0', 'scene-slider-1', 'scene-knob-0']
+// const controls = ['scene-bang-0', 'scene-toggle-0', 'scene-dropdown-0']
+
+randomizeAtInterval(controls, process.argv[2] || 1000)
