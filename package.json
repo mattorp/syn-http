@@ -11,7 +11,8 @@
     "generate:examples:scenes": "node scripts/generate/examples/scenes.js",
     "generate:examples:values": "node scripts/generate/examples/values.js",
     "generate:examples": "npm-run-all generate:examples:*",
-    "generate:random:controls": "node scripts/generate/random/controls.js"
+    "generate:random:controls": "node scripts/generate/random/controls.js",
+    "script:controls:interval:randomize": "node scripts/controls/interval/randomize.js"
   },
   "dependencies": {
     "@types/midi": "^2.0.0",
