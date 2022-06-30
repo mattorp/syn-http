@@ -19,7 +19,6 @@ NOTE: Synesthesia Pro is required for this to work.
   - [Generate](#generate)
     - [Random controls](#random-controls)
     - [Examples](#examples-1)
-[Random controls](#generate)
 
 It will include a CLI tool later to avoid having to clone this repo. Note that this should not be used to build upon for now. It's in a very early stage of development. I just needed the functionality for now, but a cleaner solution will be implemented later.
 
