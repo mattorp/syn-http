@@ -1,6 +1,6 @@
 # syn-http
 
-This is an HTTP endpoint for [Synesthesia](https://synesthesia.live). For now, it supports setting controls and scenes and getting values from Synesthesia including audio variables. The purpose is to provide a URL interface, that map to OSC messages.
+This is an HTTP endpoint for [Synesthesia](https://synesthesia.live). For now, it supports setting controls and scenes and getting values from Synesthesia including audio variables. The purpose is to provide an HTTP interface, that map to OSC messages.
 
 NOTE: Synesthesia Pro is required for this to work.
 
